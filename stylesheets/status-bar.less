@@ -1,10 +1,7 @@
 .status-bar {
-  color: #333;
-  text-shadow:rgba(255,255,255,0.4) 0 1px;
-  background-image: linear-gradient(#E3E3E5, #C0C0C0);
-  border-top:1px solid #999;
-  color:#555;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: @color-blue-dark;
+  color: @color-text-sleeping;
+  font-weight: bold;
 
   .prompt {
     margin-bottom:3px;
@@ -12,7 +9,7 @@
   }
 
   .prompt:before {
-    color:rgba(0,0,0,0.2);
+    color: red;
     line-height:1;
     top:1px;
     display:inline-block;
@@ -30,7 +27,7 @@
   }
 
   .git-status.octicons.ignored-status-icon {
-    color: #333;
+    color: red;
     display: inline-block;
   }
 
@@ -41,7 +38,7 @@
   }
 
   .grammar-name:hover {
-    color: #000;
+    color: red;
     border: 1px solid rgba(50, 50, 50, 0.2);
     border-radius: 2px;
   }
