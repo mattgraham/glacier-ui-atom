@@ -64,24 +64,26 @@
   .status-added:after,
   .status-modified:after {
     font-family:"Octicons Regular";
-    font-size:12px;
     line-height:1;
-    content:'\f052';
+    color: @color-blue-sleeping;
     position:absolute;
-    right: 8px;
-    margin-top: 6px;
-    height: 10px;
-    width: 10px;
+    height: 16px;
+    width: 16px;
     -webkit-font-smoothing:antialiased;
     z-index: 5;
+    left: 8px;
+    margin-top: 8px;
+    font-size: 10px;
   }
 
   .status-added:after {
-    color: @color-added !important;
+    content:'\f05d';
+    color: @color-added;
   }
 
   .status-modified:after {
-    color: @color-modified !important;
+    content:'\f052';
+    color: @color-modified;
   }
 
   .expanded.new:before,
