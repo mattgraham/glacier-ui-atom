@@ -1,7 +1,7 @@
 {
   "name": "glacier-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Glacier UI Theme inspired by Glacier for Sublime",
   "repository": "https://github.com/mattgraham/glacier-ui-atom",
   "license": "MIT",
