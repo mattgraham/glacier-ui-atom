@@ -1,15 +1,11 @@
 {
-  "name": "glacier-theme",
+  "name": "glacier-ui",
   "theme": "ui",
-  "version": "0.0.1",
-  "description": "Theme based inspired by Glacier for Sublime",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mattgraham/glacier-ui-atom.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mattgraham/glacier-ui-atom/issues"
-  },
+  "version": "0.0.0",
+  "description": "Glacier UI Theme inspired by Glacier for Sublime",
+  "repository": "https://github.com/mattgraham/glacier-ui-atom",
+  "license": "MIT",
   "engines": {
-    "atom": ">26.0"
+    "atom": ">0.50.0"
   }
+}
