@@ -18,7 +18,7 @@
       min-width: 30px;
 
       &.cursor-line {
-        color: #3CADD7;
+        color: @color-blue-active;
         opacity: 1;
       }
 
@@ -76,14 +76,14 @@
   }
 
   &.mini {
-    border-radius: 1px;
+    color: @color-grey-medium;
+    border-radius: @border-radius;
     background: @color-white;
-    padding: 4px 6px;
+    padding: 4px 12px;
 
     .selection .region {
-      background-color: rgba(56,146,227,0.25);
+      background-color: @color-accent;
     }
-
     .cursor {
       border-color: @color-cursor;
     }
@@ -92,10 +92,6 @@
       -webkit-box-shadow: -2px 0px 10px 2px #222222;
     }
   }
-}
-
-.editor-colors.mini {
-  color: #555;
 }
 
 @-webkit-keyframes highlight {

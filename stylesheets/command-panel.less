@@ -1,41 +1,81 @@
 .tool-panel.panel-bottom {
-  background-color: @color-blue-dark;
-  padding: 20px;
-  line-height: 40px;
+  background-color: #060A0D;
+  padding: 20px 40px 30px;
+  line-height: 38px;
+  color: @color-grey-light;
+  border-top: 1px solid @color-blue-sleeping;
 }
 
 .find-and-replace .find-meta-container {
   top:0;
 }
 
-.btn-group > .btn:first-child {
-  border-left:1px solid #aaa;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+.btn-group { 
+  .btn {
+    color: @color-grey-light;
+    background: @color-blue-sleeping;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    height: 32px;
+    text-shadow: none;
+    transition: color .1s ease-in;
+    margin-left: 0;
+    border-radius: @border-radius;
+
+    &:hover {
+      color: @color-white;
+      background: lighten(@color-blue-dark, 30%);
+      border: none;
+      margin-left: 0;
+    }
+  }
+  
+  .btn + .btn {
+    margin-left: 0;
+    border: none;
+    box-shadow: inset 1px 0 0 @color-blue-dark;
+  }
+
+  .selected {
+    color: @color-white;
+    background: lighten(@color-blue-dark, 20%);
+
+    &:hover {
+      background: lighten(@color-blue-dark, 30%);
+    }
+  }
 }
 
-.btn-group > .btn:last-child, .btn-group > .btn.selected:last-child, .btn-group > .dropdown-toggle {
-  border-right:1px solid #aaa;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+.btn-group-options, .btn-group-replace-all {
+  width: 110px !important;
 }
 
-.btn-group .btn {
-  height:32px;
+.btn-group-find, .btn-group-replace {
+  width: 190px !important;
 }
 
-.project-find .find-container .btn-toggle.btn-group, .project-find .replace-container .btn-toggle.btn-group, .project-find .paths-container .btn-toggle.btn-group {
-  width:100px;
+.project-find {
+  .options-label .options {
+    color: @color-blue-active;
+  }
+
+  .find-container .btn-toggle.btn-group, .project-find .replace-container .btn-toggle.btn-group, .project-find .paths-container .btn-toggle.btn-group {
+    width:100px;
+  }
+}
+
+.icon-color-mode:before {
+  font-size: 16px !important;
 }
 
 .tool-panel .panel-heading {
-  background: #F3F3F3;
   border: 1px solid #A8A8A8;
   border-bottom:none;
   border-radius:4px 4px 0 0;
   box-shadow:inset rgba(255,255,255,0.25) 0 -1px 0, inset #fff 0 1px 0;
   padding:6px 8px;
-  font:500 13px "Helvetica Neue";
+  font:500 13px @font-family;
 }
 .tool-panel .results-view {
   background-color: #f8f8f8;
@@ -44,14 +84,13 @@
   padding:0;
 }
 .command-panel .preview-count {
-  color: blue;
   font-size:13px;
   padding-left:6px;
 }
 .tool-panel .results-view .path-details {
   background: rgba(0,0,0,0.05);
   border-bottom:1px solid #d5d5d5;
-  font:11px "Lucida Grande";
+  font: 11px @font-family;
   line-height:25px;
   position:relative;
   padding:0 10px;
@@ -70,7 +109,7 @@
   color: #555;
   border-top: 1px solid #ccc;
   box-shadow:inset #fff 0 1px;
-  font:11px "Lucida Grande";
+  font: 11px @font-family;
 }
 .tool-panel .results-view .path:before {
   display:none;
@@ -95,8 +134,8 @@
     & > span {
       padding:0 10px;
       display:table-cell;
-      font-size:12px;
-      font-family:Monoco, monospace;
+      font-size: 12px;
+      font-family: @font-monospace;
     }
 
     span.line-number {
@@ -136,8 +175,7 @@
   color: pink;
 }
 .tool-panel .error-messages {
-  padding:0 0 10px;
-  color:#911;
-  font:500 13px/15px "Helvetica Neue";
-  text-shadow:rgba(255,255,255,0.8) 0 1px;
+  padding: 0 0 10px;
+  color: #911;
+  font: 13px/15px @font-family;
 }
