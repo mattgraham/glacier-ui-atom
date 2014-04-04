@@ -25,7 +25,7 @@ If you want to contribute an enhancement or a fix:
 - Fork the project on GitHub.
 - Make your changes.
 - Commit the changes without making changes to any other files that aren't related to your enhancement or fix.
-- Send a pull request. 
+- Send a pull request.
 
 
 For anything else find me via twitter at [@michigangraham](http://twitter.com/michigangraham)
