@@ -1,8 +1,8 @@
 # Glacier UI for Atom
 
-Glacier UI for Atom.io is a **work in progress** theme inspired by @joeyfigaro's Glacier for Sublime.
+Glacier UI for Atom.io by @mattgraham inspired by @joeyfigaro's Glacier for Sublime.
 
-![The Pretty](http://f.cl.ly/items/0W3P3p3s1U1D0H152x1R/Screen%20Shot%202014-04-03%20at%206.17.17%20PM.png)
+![The Pretty](http://f.cl.ly/items/1D1g092w2y280R1i0U2G/glacier-theme.png)
 
 ## Install
 
