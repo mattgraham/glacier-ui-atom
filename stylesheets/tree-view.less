@@ -3,7 +3,7 @@
   background: @color-tree-background;
   padding:4px 6px;
   min-width:0;
-  font-weight: bold;
+  font-weight: normal;
 
   &.list-group .selected > *, .tree-view.list-tree .selected > * {
     position: static;
@@ -27,6 +27,11 @@
       white-space:nowrap;
       line-height:21px;
       padding-left: 2px;
+      transition: color .1s ease-in;
+
+      &:before {
+        transition: color .1s ease-in;
+      }
     }
 
     &.status-new > .name,
@@ -35,6 +40,10 @@
 
     .name:hover {
       color: @color-white;
+
+      &:before {
+        color: #FF2E1D;
+      }
     }
   }
 
@@ -107,31 +116,30 @@
   //HIDING ICONS FIX ME WITH LOVE
   .entry > .header > .name:before,
   .entry > .name:before {
-    display:none;
   }
 
   // .entry.selected > .header > .name:before,
   // .entry.selected > .name:before {
   // }
 
-  &.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item:before {
-    width:12px;
-    height:12px;
-    content:'\f016';
-    display:inline-block;
-    position:relative;
-    color: @color-blue-active;
-  }
+  // &.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item:before {
+  //   width:12px;
+  //   height:12px;
+  //   content:'\f016';
+  //   display:inline-block;
+  //   position:relative;
+  //   color: @color-blue-active;
+  // }
 
-  &.list-tree.has-collapsable-children .list-nested-item > .list-item:before {
-    top:2px;
-    left:2px;
-    width:12px;
-    height:12px;
-    font-size: 12px;
-    content:'\f016';
-    color: @color-blue-active;
-  }
+  // &.list-tree.has-collapsable-children .list-nested-item > .list-item:before {
+  //   top:2px;
+  //   left:2px;
+  //   width:12px;
+  //   height:12px;
+  //   font-size: 12px;
+  //   content:'\f016';
+  //   color: @color-blue-active;
+  // }
 
   &:focus .selected.status-added:after,
   &:focus .selected.status-modified:after {
