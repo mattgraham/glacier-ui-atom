@@ -1,9 +1,19 @@
 .tree-view {
   font: 11px/16px "Lucida Grande";
   background: @color-tree-background;
-  padding:4px 6px;
+  padding: 5px 6px 4px 15px;
   min-width:0;
   font-weight: normal;
+
+  &:before {
+    content: 'Folder';
+    text-transform: uppercase;
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
 
   &.list-group .selected > *, .tree-view.list-tree .selected > * {
     position: static;
