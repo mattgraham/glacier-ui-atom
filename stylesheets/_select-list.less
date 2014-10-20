@@ -3,7 +3,6 @@
   margin-top: 58px;
   padding: 0;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,.3);
 
   .loading {
     position: absolute;
@@ -23,33 +22,32 @@
   }
 
   .error {
-    font: 300 13px/17px "Helvetica Neue";
-    color:#999;
-    padding:12px;
+    font: 300 13px/17px;
+    color: #999;
+    padding: 12px;
   }
 
   ol,
-  .error {
-    margin:0;
-  }
+    .error {
+      margin:0;
+    }
 
   ol {
     li {
-      background-color: @color-blue-dark;
+      background: darken(#0D151B, 2%);
       position:relative;
-      padding: 14px 40px;
+      padding: 14px;
       z-index:1;
 
       .primary-line:before {
         display:none;
       }
-
     }
   }
-  
+
   ol li,
   ol li .primary-line {
-    font:500 13px/17px "Helvetica Neue";
+    font:500 13px/17px;
     color: @color-white;
   }
 
@@ -59,7 +57,7 @@
   }
 
   ol .selected {
-    background: #020305;
+    background: lighten(#0D151B, 2%);
     color: @color-accent;
     z-index:2;
 
@@ -71,7 +69,7 @@
   ol .selected .right,
   ol .selected .secondary-line {
     color: @color-accent;
-    opacity:0.7;
+    opacity: 0.7;
   }
 
   .status {
@@ -79,15 +77,22 @@
     margin-top:3px;
   }
 
+  ol .primary-line {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   ol .secondary-line {
-    padding:0;
-    margin:0;
+    font-size: 11px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+    opacity: .5;
   }
 
   ol .right,
   ol .secondary-line {
     color: #b8b8b8;
-    font:11px/17px "Lucida Grande";
   }
 
   ol .modified {
@@ -122,11 +127,12 @@
   }
 
   ol .key-binding {
-    font:11px "Lucida Grande";
+    background: rgba(255,255,255,.1);
     border-radius: 2px;
     margin-left: 5px;
-    padding: 3px;
-    font-size: 11px;
-    opacity:0.7;
+    padding: 3px 10px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    opacity:0.5;
   }
 }

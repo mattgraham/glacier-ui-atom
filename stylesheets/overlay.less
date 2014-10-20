@@ -11,9 +11,6 @@
 		color: @color-links;
 	}
 
-	h1 {
-	}
-
 	.btn {
 		background: lighten(@color-blue-active, 20%);
 		box-shadow: 0 0 0 1px lighten(@color-blue-active, 15%);
@@ -25,4 +22,20 @@
 			box-shadow: 0 0 0 1px lighten(@color-blue-active, 15%), 0 1px 1px @color-blue-active;
 		}
 	}
+}
+
+.command-palette.overlay.from-top {
+  box-shadow: none;
+
+  .editor.react.editor-colors.mini.is-focused > input {
+    // height: 60px;
+  }
+
+  .event {
+    background: darken(#0D151B, 2%);
+
+    &.selected {
+      background: lighten(#0D151B, 2%);
+    }
+  }
 }
