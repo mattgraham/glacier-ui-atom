@@ -1,5 +1,8 @@
-.editor {
+.editor.is-focused .cursor-line {
+  background: rgba(255,255,255,.02) !important;
+}
 
+.editor {
   .highlighted.selection .region {
     -webkit-animation-name: highlight;
     -webkit-animation-duration: 1s;
@@ -11,16 +14,15 @@
   }
 
   .gutter {
-
     .line-number {
       color: #273546;
       opacity: 1;
       padding-left: 15px;
       min-width: 30px;
+      transition: color .2s ease-in;
 
       &.cursor-line {
-        color: @color-blue-active;
-        opacity: 1;
+        color: rgba(255,255,255,.5);
       }
 
       &.git-line-modified {
@@ -56,7 +58,6 @@
     .cursor {
       border-color: @color-cursor;
     }
-
     .gutter.drop-shadow {
       -webkit-box-shadow: -2px 0px 10px 2px #222222;
     }
