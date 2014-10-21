@@ -25,53 +25,21 @@
 
       &.git-line-modified {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-modified;
-
-        &:before {
-          display: inline-block;
-          content:'•';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-modified;
-        }
+        box-shadow: inset 2px 0 0 0 @color-modified;
       }
 
       &.git-line-removed {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-removed;
+        box-shadow: inset 2px 0 0 0 @color-removed;
 
         &:before {
-          display: inline-block;
-          content:'-';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-removed;
+          display: none;
         }
       }
 
       &.git-line-added {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-added;
-
-        &:before {
-          display: inline-block;
-          content:'+';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-added;
-        }
+        box-shadow: inset 2px 0 0 0 @color-added;
       }
     }
   }
