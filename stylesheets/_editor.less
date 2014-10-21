@@ -1,5 +1,8 @@
-.editor {
+.editor.is-focused .cursor-line {
+  background: rgba(255,255,255,.02) !important;
+}
 
+.editor {
   .highlighted.selection .region {
     -webkit-animation-name: highlight;
     -webkit-animation-duration: 1s;
@@ -11,67 +14,34 @@
   }
 
   .gutter {
-
     .line-number {
       color: #273546;
       opacity: 1;
       padding-left: 15px;
       min-width: 30px;
+      transition: color .2s ease-in;
 
       &.cursor-line {
-        color: @color-blue-active;
-        opacity: 1;
+        color: rgba(255,255,255,.5);
       }
 
       &.git-line-modified {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-modified;
-
-        &:before {
-          display: inline-block;
-          content:'•';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-modified;
-        }
+        box-shadow: inset 2px 0 0 0 @color-modified;
       }
 
       &.git-line-removed {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-removed;
+        box-shadow: inset 2px 0 0 0 @color-removed;
 
         &:before {
-          display: inline-block;
-          content:'-';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-removed;
+          display: none;
         }
       }
 
       &.git-line-added {
         border-left: none;
-        box-shadow: inset 1px 0 0 0 @color-added;
-
-        &:before {
-          display: inline-block;
-          content:'+';
-          font-size: 11px;
-          line-height: inherit;
-          position:absolute;
-          left: 0;
-          top: 3px;
-          left: 5px;
-          color: @color-added;
-        }
+        box-shadow: inset 2px 0 0 0 @color-added;
       }
     }
   }
@@ -88,7 +58,6 @@
     .cursor {
       border-color: @color-cursor;
     }
-
     .gutter.drop-shadow {
       -webkit-box-shadow: -2px 0px 10px 2px #222222;
     }

@@ -8,6 +8,7 @@
   font-weight: normal;
 
   &:before {
+    font-family: "Octicons Regular";
     content: 'Folder';
     text-transform: uppercase;
     display: block;
@@ -21,11 +22,53 @@
     position: static;
   }
 
+  .icon:before {
+    font-family: "Octicons Regular";
+  }
+
+  .icon-repo {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
   .entry {
     min-height:24px;
+    position: relative;
 
     .status-ignored span {
       color: rgba(255,255,255, .15);
+    }
+
+    li span:before {
+      font-family: "Octicons Regular";
+      margin-right: 10px;
+      font-size: 16px !important;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    li span {
+
+      &.icon-file-text:before {
+        font-family: "glacier";
+        content: '\E80B';
+      }
+
+      &.icon-book:before {
+      }
+
+      &.icon-file-directory:before {
+      }
+
+    }
+
+    [data-name=".git"]:before {
+      font-family: "glacier";
+      content: '\E83A';
+    }
+
+    [data-name*="svg"]:before,[data-name*="eot"]:before,[data-name*="ttf"]:before,[data-name*="woff"]:before {
+      font-family: "glacier";
+      content: '\E842' !important;
     }
 
     .name {
@@ -50,12 +93,8 @@
       }
     }
 
-    &.status-new > .name,
-    &.status-modified > .name {
-    }
-
     .name:hover {
-      color: @color-white;
+      color: @color-white !important;
 
       &:before {
         color: #e74c3c;
@@ -64,11 +103,11 @@
   }
 
   .directory .entries {
-    margin-left: 6px;
+    margin-left: 5px;
   }
 
   .directory > .header {
-    line-height:17px;
+    margin: 0 0 1px 0;
   }
 
   .selected:before {
@@ -78,16 +117,12 @@
     background: none;
   }
 
-  .modified:before {
-    color: #f78a46;
-  }
-
   .status-added:after,
   .status-modified:after {
     font-family: "Octicons Regular";
     font-size: 10px;
     line-height: 1;
-    position: absolute;
+    position: fixed;
     left: 8px;
     margin-top: 8px;
     height: 16px;
@@ -96,14 +131,22 @@
     z-index: 5;
   }
 
-  .status-added:after {
-    content:'\f05d';
+  .status-added > span {
     color: @color-added !important;
   }
 
-  .status-modified:after {
-    content:'\f052';
+  .status-added:after {
+    color: @color-added !important;
+    content:'\f05d';
+  }
+
+  .status-modified > span {
     color: @color-modified !important;
+  }
+
+  .status-modified:after {
+    color: @color-modified !important;
+    content:'\f052';
   }
 
   .expanded.new:before,
@@ -120,7 +163,6 @@
     color: @color-accent;
   }
 
-  .selected.entry > .header > .name,
   .selected.entry > .name {
     color: @color-accent;
   }
@@ -131,36 +173,9 @@
     font-size: 16px;
   }
 
-  .entry.selected > .header > .name:before,
-  .entry.selected > .name:before {
-  }
-
-  // &.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item:before {
-  //   width:12px;
-  //   height:12px;
-  //   content:'\f016';
-  //   display:inline-block;
-  //   position:relative;
-  //   color: @color-blue-active;
-  // }
-
-  // &.list-tree.has-collapsable-children .list-nested-item > .list-item:before {
-  //   top:2px;
-  //   left:2px;
-  //   width:12px;
-  //   height:12px;
-  //   font-size: 12px;
-  //   content:'\f016';
-  //   color: @color-blue-active;
-  // }
-
-  &:focus .selected.status-added:after,
-  &:focus .selected.status-modified:after {
-  }
-
   .collapsed.status-added:after,
   .collapsed.status-modified:after {
-    margin-top: -17px;
+    margin-top: -18px;
   }
 
   .expanded.status-added:after,
@@ -171,6 +186,19 @@
 
 .tree-view-scroller {
   overflow-x:hidden;
+}
+
+.tree-view-scrolls-horizontally {
+  height:100%;
+  overflow-x:auto;
+  overflow-y:auto;
+  width:100%;
+
+  .tree-view {
+    min-width:-webkit-min-content;
+    min-height:100%;
+    position:relative;
+  }
 }
 
 .header.list-item {
@@ -185,11 +213,10 @@
   padding-left: 4px;
 }
 
-.list-tree.has-collapsable-children li.list-item {
-}
-
 .tree-view-dialog {
-  font:11px "Lucida Grande";
+  font-size: 11px;
+  line-height: 18px;
+  font-family: "Open Sans", "Lucida Grande";
   color: #555;
   padding:5px 8px 9px;
   border-top:1px solid #999;
@@ -198,7 +225,10 @@
 
   .prompt {
     color: red;
-    font:500 13px "Helvetica Neue";
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "Open Sans", "Lucida Grande";
     margin-bottom:3px;
     position:relative;
   }
