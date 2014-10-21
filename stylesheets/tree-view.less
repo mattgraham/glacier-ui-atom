@@ -188,6 +188,19 @@
   overflow-x:hidden;
 }
 
+.tree-view-scrolls-horizontally {
+  height:100%;
+  overflow-x:auto;
+  overflow-y:auto;
+  width:100%;
+
+  .tree-view {
+    min-width:-webkit-min-content;
+    min-height:100%;
+    position:relative;
+  }
+}
+
 .header.list-item {
   display:block;
 }
