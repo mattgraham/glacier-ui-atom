@@ -2,12 +2,35 @@
   background: rgba(255,255,255,.02) !important;
 }
 
+.scrollbars-visible-always {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    background: @color-tree-background !important;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: lighten(@color-tree-background, 7%);
+    -webkit-box-shadow: none !important;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #B5B5B5;
+  }
+}
+
 .editor {
   .highlighted.selection .region {
     -webkit-animation-name: highlight;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
   }
+
 
   .invisible-character {
     opacity:0.25;
