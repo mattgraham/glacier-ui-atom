@@ -1,5 +1,9 @@
+.icon:before {
+  font-family: "Octicons Regular";
+}
+
 .tree-view {
-  font-size: 12px;
+  font-size: 11.5px;
   line-height: 18px;
   font-family: "Open Sans", "Lucida Grande";
   background: @color-tree-background;
@@ -14,16 +18,13 @@
     display: block;
     color: #e74c3c;
     font-size: 11px;
+    font-size: 11px;
     letter-spacing: 1px;
     margin: 5px 0;
   }
 
   &.list-group .selected > *, .tree-view.list-tree .selected > * {
     position: static;
-  }
-
-  .icon:before {
-    font-family: "Octicons Regular";
   }
 
   .icon-repo {
@@ -49,7 +50,7 @@
     li span {
 
       &.icon-file-text:before {
-        font-family: "glacier";
+        font-family: "glacier" !important;
         content: '\E80B';
       }
 
@@ -62,12 +63,12 @@
     }
 
     [data-name=".git"]:before {
-      font-family: "glacier";
+      font-family: "glacier" !important;
       content: '\E83A';
     }
 
     [data-name*="svg"]:before,[data-name*="eot"]:before,[data-name*="ttf"]:before,[data-name*="woff"]:before {
-      font-family: "glacier";
+      font-family: "glacier" !important;
       content: '\E842' !important;
     }
 

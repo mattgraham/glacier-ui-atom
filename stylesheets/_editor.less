@@ -1,5 +1,5 @@
-.editor.is-focused .cursor-line {
-  background: rgba(255,255,255,.02) !important;
+.atom-pane .item-views .pane-item {
+  background: red;
 }
 
 .scrollbars-visible-always {
@@ -22,6 +22,10 @@
   ::-webkit-scrollbar-thumb:window-inactive {
     background: lighten(@color-tree-background, 7%);
   }
+}
+
+.editor.is-focused .cursor-line {
+  background: rgba(255,255,255,.02) !important;
 }
 
 .editor {
@@ -65,23 +69,6 @@
         border-left: none;
         box-shadow: inset 2px 0 0 0 @color-added;
       }
-    }
-  }
-
-  &.mini {
-    color: @color-grey-medium;
-    border-radius: @border-radius;
-    background: @color-white;
-    padding: 4px 12px;
-
-    .selection .region {
-      background-color: @color-accent;
-    }
-    .cursor {
-      border-color: @color-cursor;
-    }
-    .gutter.drop-shadow {
-      -webkit-box-shadow: -2px 0px 10px 2px #222222;
     }
   }
 }

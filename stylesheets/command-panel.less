@@ -2,6 +2,11 @@
   background-color: #060A0D;
   line-height: 38px;
   color: @color-grey-light;
+  padding: 10px 20px;
+
+  .highlight {
+    color: @color-modified;
+  }
 }
 
 .find-and-replace .find-meta-container {
@@ -148,8 +153,7 @@
 }
 
 .matches.list-group .selected:before, .matches.list-tree .selected:before {
-  content:none;
-
+  content: none;
 }
 
 .list-tree .list-nested-item > .list-tree, .list-tree .list-nested-item > .list-group {
@@ -174,10 +178,9 @@
 }
 .tool-panel .results-panel li.operation:hover,
 .tool-panel li.operation.selected .preview {
-  color: pink;
 }
 .tool-panel .error-messages {
-  padding: 0 0 10px;
+  padding: 0 10px;
   color: #911;
   font: 13px/15px @font-family;
 }
