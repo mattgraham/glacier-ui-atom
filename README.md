@@ -1,6 +1,6 @@
 # Glacier UI for Atom
 
-:warning: **Warning the new version of Atom (January 2015) currently breaks this theme. Updates coming.** 
+:warning: **Warning the new version of Atom (January 2015) currently breaks various elements of this theme. Updates coming.** 
 
 Glacier UI for Atom.io by @mattgraham inspired by @joeyfigaro's Glacier for Sublime.
 
